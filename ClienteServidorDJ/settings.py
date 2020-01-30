@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')sp0nsig)!h8q**49*cwn=nabktb9rvk@t5-hgda4ylzo7%)qg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','3.86.115.93']
 
 
 # Application definition
@@ -76,9 +76,9 @@ WSGI_APPLICATION = 'ClienteServidorDJ.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'alexisdb',
+        'NAME': 'dbalexis',
         'USER': 'postgres',
-        'PASSWORD': 'admin123',
+        'PASSWORD': 'master1234',
         'HOST': 'alexis-instance.cajs7eht7awe.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
