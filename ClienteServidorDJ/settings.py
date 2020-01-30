@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'dbalexis',
         'USER': 'postgres',
         'PASSWORD': 'master1234',
-        'HOST': 'alexis-instance.cajs7eht7awe.us-east-1.rds.amazonaws.com',
+        'HOST': 'database-1.ckljaavzngqk.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
