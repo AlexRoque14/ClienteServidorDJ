@@ -20,6 +20,8 @@ from django.conf.urls import include, url
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from rest_framework_swagger.views import get_swagger_view
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -45,3 +47,5 @@ urlpatterns = [
     re_path(r'^api/v1/', include('Profile.urls')),
 
 ]
+
+urlpatterns += staticfiles_urlpatterns()
