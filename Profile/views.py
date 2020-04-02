@@ -1,5 +1,6 @@
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
+from rest_framework.permissions import IsAuthenticated
 
 from django.shortcuts import get_object_or_404
 from django.http import Http404
@@ -40,7 +41,7 @@ class ProfileLisViewSchema(AutoSchema):
 
 
 class ProfileList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #METODO GET PARA SOLICITAR INFO
     def get (self , request , format = None):
@@ -61,7 +62,7 @@ class ProfileList(APIView):
 
 
 class EstadoList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #Metodo GET
     def get(self, request, format = None):
@@ -83,7 +84,7 @@ class EstadoList(APIView):
 
 
 class CiudadList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #Metodo GET
     def get(self, request, format = None):
@@ -104,7 +105,7 @@ class CiudadList(APIView):
 
 
 class EstadoCList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #Metodo GET
     def get(self, request, format = None):
@@ -125,7 +126,7 @@ class EstadoCList(APIView):
 
 
 class GeneroList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #Metodo GET
     def get(self, request, format = None):
@@ -146,7 +147,7 @@ class GeneroList(APIView):
 
 
 class OcupacionList(APIView):
-    permission_classes =[]
+    permission_classes =[IsAuthenticated]
     schema = ProfileLisViewSchema()
     #Metodo GET
     def get(self, request, format = None):
